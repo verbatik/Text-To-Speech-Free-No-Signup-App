@@ -149,42 +149,42 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-white to-purple-100">
-      <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center">
-            <span className="text-2xl font-bold text-indigo-800">TextToSpeech.ing</span>
-          </div>
-          <nav>
-            <ul className="flex space-x-6">
-              <li><Link href="https://verbatik.com" className="text-gray-600 hover:text-indigo-700">Features</Link></li>
-              <li><Link href="https://verbatik.com/api/" className="text-gray-600 hover:text-indigo-700">How It Works</Link></li>
-              <li><Link href="https://verbatik.com/faq/" className="text-gray-600 hover:text-indigo-700">FAQ</Link></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+     <header className="bg-white shadow-sm">
+  <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+    <div className="flex items-center mb-4 sm:mb-0">
+      <span className="text-2xl font-bold text-indigo-800">TextToSpeech.ing</span>
+    </div>
+    <nav className="w-full sm:w-auto">
+      <ul className="flex flex-wrap justify-center space-x-4 sm:space-x-6">
+        <li><Link href="https://verbatik.com" className="text-gray-600 hover:text-indigo-700">Features</Link></li>
+        <li><Link href="https://verbatik.com/api/" className="text-gray-600 hover:text-indigo-700">How It Works</Link></li>
+        <li><Link href="https://verbatik.com/faq/" className="text-gray-600 hover:text-indigo-700">FAQ</Link></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-      <section className="hero bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-10 md:mb-0">
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Transform Text to Natural Speech in Seconds</h1>
-                <p className="text-xl mb-8">Create professional voice content for videos, podcasts, and more - without any signup required.</p>
-                <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                  <a href="#converter" className="bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-6 rounded-lg transition duration-300">
-                    Start Converting
-                  </a>
-                  <a href="#how-it-works" className="bg-transparent border-2 border-white hover:bg-white hover:text-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-                    Learn More
-                  </a>
-                </div>
-              </motion.div>
-            </div>
+<section className="hero bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-12 sm:py-20">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col md:flex-row items-center">
+      <div className="md:w-1/2 mb-10 md:mb-0">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Transform Text to Natural Speech in Seconds</h1>
+          <p className="text-lg sm:text-xl mb-8">Create professional voice content for videos, podcasts, and more - without any signup required.</p>
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="#converter" className="text-center bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-6 rounded-lg transition duration-300">
+              Start Converting
+            </a>
+            <a href="#how-it-works" className="text-center bg-transparent border-2 border-white hover:bg-white hover:text-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+              Learn More
+            </a>
+          </div>
+        </motion.div>
+      </div>
             <div className="md:w-1/2">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -213,8 +213,8 @@ export default function Home() {
         </div>
       </section>
 
-      <main id="converter" className="container mx-auto px-4 py-16">
-        <motion.div
+      <main id="converter" className="container mx-auto px-4 py-10 sm:py-16">
+      <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

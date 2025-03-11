@@ -21,13 +21,14 @@ export default function ApiKeyInput({ apiKey, setApiKey }: ApiKeyInputProps) {
           type={isVisible ? "text" : "password"}
           value={apiKey}
           onChange={(e) => setApiKey(e.target.value)}
-          placeholder="Enter your Verbatik API key (starts with vbt_)"
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
+          placeholder="Enter your Verbatik API key"
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 pr-10"
         />
         <button
           type="button"
           onClick={() => setIsVisible(!isVisible)}
           className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-gray-700"
+          aria-label={isVisible ? "Hide API key" : "Show API key"}
         >
           {isVisible ? (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -42,8 +43,8 @@ export default function ApiKeyInput({ apiKey, setApiKey }: ApiKeyInputProps) {
           )}
         </button>
       </div>
-      <p className="mt-1 text-xs text-gray-500">
-        Your API key is only used client-side and never stored on our servers
+      <p className="mt-1 text-xs text-gray-500 break-words">
+        Your API key is only used client-side and never stored on our servers. Get your API key from <a href="https://api.verbatik.com/dashboard" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-800 underline">https://api.verbatik.com/dashboard</a>
       </p>
     </div>
   );
