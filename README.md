@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Text-to-Speech App
+
+A free, easy-to-use text-to-speech converter powered by the Verbatik API.
+
+
+## Features
+
+- Convert text to natural-sounding speech
+- Multiple voice options with different languages and genders
+- No signup required - just use a Verbatik API key
+- Audio visualization
+- Local storage for your settings
+- Modern, responsive design
 
 ## Getting Started
 
-First, run the development server:
+## About Verbatik API
+
+[Verbatik](https://verbatik.com/api) is a powerful text-to-speech API that provides high-quality, natural-sounding voice synthesis. This application leverages the Verbatik API to convert text into speech.
+
+### Getting a Verbatik API Key
+
+1. Visit [Verbatik's website](https://api.verbatik.com) and create an account
+2. Navigate to the API section in your dashboard
+3. Generate a new API key
+4. Copy the API key and use it in this application
+
+### Verbatik API Features Used in This App
+
+- **Voice Selection**: Access to multiple voices with different genders and language options
+- **Text-to-Speech Conversion**: Convert plain text to natural-sounding speech
+- **Audio Storage**: Generated audio files are stored and accessible via URLs
+- **Voice Metadata**: Information about available voices including name, gender, and language code
+
+### API Endpoints Used
+
+- `GET https://api.verbatik.com/api/v1/voices` - Retrieves available voices
+- `POST https://api.verbatik.com/api/v1/tts` - Converts text to speech
+
+For more information about the Verbatik API, including rate limits, additional features, and pricing, visit the [Verbatik documentation](https://docs.verbatik.com/en/collections/11809373-verbatik-api).
+
+
+### Prerequisites
+
+- Node.js (v18 or newer)
+- npm, yarn, pnpm, or bun
+- Verbatik API key
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/verbatik/text-to-speech-app-free.git
+cd text-to-speech-app-free
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Enter your Verbatik API key
+2. Type or paste your text
+3. Select a voice
+4. Click "Generate Speech"
+5. Play or download the generated audio
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Deploy on Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The easiest way to deploy this Next.js application is using [Vercel](https://vercel.com/).
 
-## Deploy on Vercel
+```bash
+# Install Vercel CLI
+npm install -g vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Deploy
+vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# For production
+vercel --prod
+```
+
+Alternatively, connect your GitHub repository to Vercel for automatic deployments.
+
+### Self-Hosting
+
+```bash
+# Build the application
+npm run build
+
+# Start the production server
+npm run start
+
+# For production with PM2
+npm install -g pm2
+pm2 start npm --name "text-to-speech-app" -- start
+```
+
+## Tech Stack
+
+- Next.js 15
+- React 19
+- Tailwind CSS 4
+- Framer Motion
+- Verbatik API
+
+## License
+
+MIT
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+Powered by Verbatik API • No signup required

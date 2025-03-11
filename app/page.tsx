@@ -7,7 +7,6 @@ import TextToSpeechForm from './components/TextToSpeechForm';
 import VoiceSelector from './components/VoiceSelector';
 import AudioPlayer from './components/AudioPlayer';
 import AudioVisualizer from './components/AudioVisualizer';
-import Image from 'next/image';
 import Link from 'next/link';
 
 interface Voice {
@@ -356,7 +355,7 @@ export default function Home() {
             </div>
             <div className="bg-gray-50 p-6 rounded-xl">
               <h3 className="text-xl font-semibold mb-2">How do I get a Verbatik API key?</h3>
-              <p className="text-gray-600">You can obtain a Verbatik API key by visiting the Verbatik website and signing up for their service. Once registered, you'll be able to access your API key from your dashboard.</p>
+              <p className="text-gray-600">You can obtain a Verbatik API key by visiting the Verbatik website and signing up for their service. Once registered, youll be able to access your API key from your dashboard.</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-xl">
               <h3 className="text-xl font-semibold mb-2">What file formats are supported?</h3>
