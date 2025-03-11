@@ -135,8 +135,8 @@ export default function Home() {
       } else {
         throw new Error('No audio URL returned');
       }
-    } catch (err: any) {
-      setError(`Failed to generate speech: ${err.message}`);
+    } catch (err: unknown) {
+      setError(`Failed to generate speech: ${err instanceof Error ? err.message : String(err)}`);
       console.error(err);
     } finally {
       setIsLoading(false);
@@ -156,9 +156,9 @@ export default function Home() {
           </div>
           <nav>
             <ul className="flex space-x-6">
-              <li><Link href="#features" className="text-gray-600 hover:text-indigo-700">Features</Link></li>
-              <li><Link href="#how-it-works" className="text-gray-600 hover:text-indigo-700">How It Works</Link></li>
-              <li><Link href="#faq" className="text-gray-600 hover:text-indigo-700">FAQ</Link></li>
+              <li><Link href="https://verbatik.com" className="text-gray-600 hover:text-indigo-700">Features</Link></li>
+              <li><Link href="https://verbatik.com/api/" className="text-gray-600 hover:text-indigo-700">How It Works</Link></li>
+              <li><Link href="https://verbatik.com/faq/" className="text-gray-600 hover:text-indigo-700">FAQ</Link></li>
             </ul>
           </nav>
         </div>
@@ -393,18 +393,18 @@ export default function Home() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><Link href="#features" className="text-gray-400 hover:text-white transition">Features</Link></li>
-                <li><Link href="#how-it-works" className="text-gray-400 hover:text-white transition">How It Works</Link></li>
-                <li><Link href="#faq" className="text-gray-400 hover:text-white transition">FAQ</Link></li>
-                <li><Link href="#converter" className="text-gray-400 hover:text-white transition">Converter</Link></li>
+                <li><Link href="https://verbatik.com/affiliate/" className="text-gray-400 hover:text-white transition">Affiliate</Link></li>
+                <li><Link href="https://verbatik.com/voice-cloning/" className="text-gray-400 hover:text-white transition">Voice Cloning</Link></li>
+                <li><Link href="https://verbatik.com/use-cases" className="text-gray-400 hover:text-white transition">Use Cases</Link></li>
+                <li><Link href="https://verbatik.com/languages" className="text-gray-400 hover:text-white transition">All Voices</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Resources</h3>
               <ul className="space-y-2">
-                <li><a href="https://verbatik.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">Verbatik API</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                <li><a href="https://verbatik.com/api" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">Verbatik API</a></li>
+                <li><a href="https://verbatik.com/privacy" className="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                <li><a href="https://verbatik.com/terms" className="text-gray-400 hover:text-white transition">Terms of Service</a></li>
               </ul>
             </div>
           </div>

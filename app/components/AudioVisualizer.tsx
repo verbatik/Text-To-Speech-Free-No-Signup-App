@@ -22,7 +22,8 @@ export default function AudioVisualizer({ audioUrl, isPlaying }: AudioVisualizer
     audioRef.current = audio;
     
     // Set up audio context and analyzer
-    const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+    const AudioContext = window.AudioContext || 
+      ((window as Window & typeof globalThis & { webkitAudioContext?: AudioContext }).webkitAudioContext);
     const audioContext = new AudioContext();
     audioContextRef.current = audioContext;
     
